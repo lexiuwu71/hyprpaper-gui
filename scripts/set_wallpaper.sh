@@ -1,7 +1,5 @@
 #!/bin/bash
 
-echo "preload = $1" > ~/.config/hypr/hyprpaper.conf
-for monitor in $(hyprctl monitors | grep 'Monitor' | awk '{ print $2 }'); do
-    echo -e "wallpaper = $monitor,$1" >> ~/.config/hypr/hyprpaper.conf
-done
-echo -e "ipc = off\nsplash = off" >> ~/.config/hypr/hyprpaper.conf
+echo "preload = $1" >~/.config/hypr/hyprpaper.conf
+echo -e "wallpaper = , $1" >>~/.config/hypr/hyprpaper.conf
+echo -e "ipc = off\nsplash = off" >>~/.config/hypr/hyprpaper.conf
