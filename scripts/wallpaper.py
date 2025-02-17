@@ -11,7 +11,7 @@ def set_wallpaper(path):
     os.system('pkill hyprpaper')
     if os.path.isfile(path):
         with open(hyprpaper_conf, 'w') as conf:
-            conf.write(f"preload = {path}\nwallpaper =  eDP-1,{path}\nipc = off\nsplash = off")
+            conf.write(f"preload = {path}\nwallpaper = , {path}\nipc = off\nsplash = off")
         
         os.system('pkill hyprpaper')
 
